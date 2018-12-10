@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+.cover-wrapper{
+  max-width:950px; margin:0 auto;
+}
+.popular{
+  color:#ff0000; font-size: 16px;
+}
+.spacing{
+  padding-right:10px;
+}
+.spacing img{
+  width:14px; height:auto; line-height:10px;
+}

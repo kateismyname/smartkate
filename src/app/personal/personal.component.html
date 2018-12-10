@@ -1,0 +1,48 @@
+<!-- Home -->
+<div class="formWrapper">
+    <div class="col-md-6 col-md-push-3">
+
+        <form name='stepOne' novalidate>
+            <div class="form-group" control-group='stepOne.bussinessType'>
+                <label for='bussinessType'>What is your bussiness?</label>
+                <select class="form-control" name='bussinessType' [(ngModel)]='bussinessType' required>
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option [value]="bussiness" *ngFor="let bussiness of bussinesses">{{bussiness}}</option>
+                </select>
+            </div>
+
+            <div class="form-group" control-group='stepOne.bussinessType'>
+                <label for='bussinessLocation'>Where do you operate from?</label>
+                <select class="form-control" name='bussinessLocation' [(ngModel)]='bussinessLocation' required>
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option [value]="location" *ngFor="let location of bussinesslo" value="">{{location}}</option>
+
+
+                </select>
+            </div>
+            <div class="form-group" *ngIf="bussinessType === 'Hairdresser' && bussinessLocation === 'Lease building'">
+                <label for="stock">Stock value</label>
+                <input type="text" class="form-control" id="stock" ngModel name="stock" required>
+            </div>
+
+
+            <div class="form-group" control-group='stepOne.userRevenue'>
+                <label for='userRevenue'>What is your revenue?</label>
+                <input id="userRevenue" class="form-control" type="number" name="Revenue" ng-model='Revenue' minlength="3"
+                    required />
+
+            </div>
+
+
+
+            <div class="ctaAlignment">
+                <a data-toggle="tab" routerlink="#/work" routerlinkactive="active" title="second" href="#/work" class="btn btn-primary">
+
+                    Next <i class="icon-chevron_next"></i>
+
+                </a>
+            </div>
+
+        </form>
+    </div>
+</div>
